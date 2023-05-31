@@ -1,5 +1,5 @@
-<h1>Best Time to buy and sell stock
-</h1>
+1.Best Time to buy and sell stock
+
 class Solution {
     public int maxProfit(int[] prices) {
 int maxprofit=0,newprofit=0;
