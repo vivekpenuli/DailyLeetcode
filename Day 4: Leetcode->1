@@ -1,0 +1,73 @@
+
+Add string:
+
+
+class Solution {
+    public String addStrings(String num1, String num2) {
+   int a=num1.length()-1;
+   int b=num2.length()-1;
+   String res="" ;
+    int carry=0;
+    while(a>=0 && b>=0)
+    {
+            int sum1=num1.charAt(a) - '0';
+            int sum2=num2.charAt(b) -'0';
+            int value= sum1+sum2+carry;
+            carry=0;
+            if(value/10>0)
+                 {
+                    res=value%10 + res;
+                    carry= value/10;
+                 }
+            else{
+                    res = value+res;
+                }
+            a--;
+            b--;
+    }
+               
+
+    
+    while(a>=0)
+    {  int sum1=num1.charAt(a) - '0';
+            int value= sum1+carry;
+            carry=0;
+            if(value/10>0)
+            {
+                res=value%10 + res;
+                carry= value/10;
+            }
+            else{
+                res = value+res;
+            }
+            a--;
+    }
+
+    
+    while(b>=0)
+    {  int sum2=num2.charAt(b) - '0';
+int value=sum2+carry;
+carry=0;
+if(value/10>0)
+{
+    res=value%10 + res;
+    carry= value/10;
+}
+else{
+    res = value+res;
+}
+b--;
+    }
+    
+
+    
+    
+            System.out.println("Hello, World!"+carry);
+if(carry!=0)
+    res=carry+res;
+    return res;
+    }
+}
+
+
+
