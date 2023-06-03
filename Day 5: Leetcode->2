@@ -1,0 +1,28 @@
+Product of array itself 👍
+
+class Solution {
+    public int[] productExceptSelf(int[] nums) {
+        int cf=1;
+        
+        int c= nums.length;
+        int[] arr=new int[c];
+        
+        for(int i=0;i<nums.length;i++)
+        {
+         cf=cf*nums[i];
+         arr[i]=cf;
+        }       
+arr[c-1]=arr[c-2];
+int prod= nums[c-1];
+for(int i=nums.length-2;i>=1;i--)
+{      
+  //   System.out.println(arr[i]+"Before insertion ");
+
+    arr[i]=arr[i-1]*prod;
+    prod=prod*nums[i];
+}
+arr[0]=prod;
+return arr;
+    }
+}
+
