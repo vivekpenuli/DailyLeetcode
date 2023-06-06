@@ -1,1 +1,40 @@
 
+Find the Index of the First Occurrence in a String
+class Solution {
+int com(String s1, String s2, int x, int y)
+{ int count =0,c=0,j=0;
+for(int i=x;i<=y;i++)
+{ 
+  //  System.out.println(s2.charAt(j));
+
+
+  if(s1.charAt(i)==s2.charAt(j))
+{
+    count++;
+    if(count==1)
+    {
+        c=i;
+
+    }
+
+}
+
+else
+return -1;  
+j++; 
+}
+return c;
+}
+
+    public int strStr(String haystack, String needle) {
+        int c=-1,a=0;
+        if(needle.length()>haystack.length()) return -1;
+        for(int i=0;i<=haystack.length()-needle.length();i++)
+        { 
+             a= com(haystack,needle,i,i+needle.length()-1);
+            if(a!=-1)
+            return a;
+        }
+    return a;
+    }
+}
