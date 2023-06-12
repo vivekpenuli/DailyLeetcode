@@ -1,1 +1,26 @@
 
+Subarray Sum Equals K
+class Solution {
+    public int subarraySum(int[] nums, int k) {
+        int cum=0;
+        int count=0;
+        Map<Integer,Integer>mp=new HashMap<>();
+        for(int i =0;i<nums.length;i++)
+        {
+            cum= nums[i]+cum;
+            if(cum==k)
+            {
+                count++;
+            }
+            if(mp.containsKey(cum-k))
+            {
+               count=mp.get(cum-k)+ count;;
+            
+            }
+        mp.put(cum,mp.getOrDefault(cum,0)+1);
+        }
+    return count;
+    }
+}
+
+
