@@ -1,6 +1,7 @@
 
 Valid Palindrome II
-class Solution {
+
+Class Solution {
     public boolean checker(String s,int i,int j)
     {
         while(i<j)
