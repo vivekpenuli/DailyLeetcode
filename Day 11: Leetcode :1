@@ -1,1 +1,25 @@
 
+Jump Game
+class Solution {
+    public boolean canJump(int[] nums) {
+        int j= 0,sum=0,newmax=0;
+        if(nums.length==1)
+        return true;
+        while(j<nums.length)
+        {
+           if(newmax<j)
+           return false;
+           if(newmax>=nums.length)
+           return true;
+     
+           sum=nums[j] + j;
+            newmax= Math.max(sum,newmax);
+            
+            j++;
+        }
+        return true;
+    }
+}
+
+
+
