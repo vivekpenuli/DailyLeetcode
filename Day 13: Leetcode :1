@@ -1,1 +1,27 @@
 
+Subarray Sums Divisible by K
+class Solution {
+    public int subarraysDivByK(int[] nums, int k) {
+        int count=0,cf=0,j=0;
+        int rem=0;
+        Map<Integer,Integer> mp = new HashMap<>();
+        while(j<nums.length)
+        {
+            cf=cf+nums[j];
+            rem=cf%k;
+
+            if(rem<0)
+            rem=rem+k;
+            
+            if(rem==0)
+            count++;  //ensureing if reaminder is zero of subaaray then it means divisible by k.
+
+            if(mp.containsKey(rem))
+            count = count + mp.get(rem);
+        
+           mp.put(rem,mp.getOrDefault(rem,0)+1);
+        j++;
+        }
+    return count;
+    }
+}
