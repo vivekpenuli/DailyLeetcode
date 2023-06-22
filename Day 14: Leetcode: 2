@@ -1,5 +1,5 @@
 
-// Happy Number
+// Happy Number //
 class Solution {
 public int check(int n)
 {int r;
