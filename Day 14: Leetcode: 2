@@ -1,1 +1,32 @@
 
+Happy Number
+class Solution {
+public int check(int n)
+{int r;
+int sum=0;
+while(n>0)
+{
+r=n%10;
+n=n/10;
+sum=r*r + sum;
+}
+return sum;
+}
+
+    public boolean isHappy(int n) {
+        if(n==1)
+        return true;
+        int slow=n;
+        int fast=n;
+        while(true)
+        {  slow=check(slow);
+        fast=check(check(fast));
+        if(slow==1)
+return true;
+        if(slow==fast)
+        return false;
+       
+        }
+    }
+}
+
