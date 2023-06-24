@@ -1,1 +1,32 @@
+Group Anagrams
+class Solution {
+    public List<List<String>> groupAnagrams(String[] strs) {
+        Map<String , List<String>> mp= new HashMap<>();
+        for(int i = 0;i<strs.length;i++)
+        {
+            char[] arr= strs[i].toCharArray();
+            Arrays.sort(arr);
+            String s1= new String(arr);
+            if(!mp.containsKey(s1))
+            {
+                List<String> ls= new ArrayList<>();               
+                ls.add(strs[i]);
+                mp.put(s1,ls);
+            }
+            else{
+             mp.get(s1).add(strs[i]);              }
+
+        }
+          List<List<String>> ans = new ArrayList<>();
+        for( Map.Entry<String, List<String>> entry: mp.entrySet() ) // way to traverse the map 
+        {
+        /* System.out.println(entry.getKey());  // map key
+         System.out.println(entry.getValue());  // elemet present in that map
+         */
+            ans.add( entry.getValue() );
+        }
+
+        return ans;
+    }
+}
 
