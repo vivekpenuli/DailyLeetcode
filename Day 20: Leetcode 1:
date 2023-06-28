@@ -1,1 +1,33 @@
+Longest Consecutive Sequence
+class Solution {
+    public int longestConsecutive(int[] nums) {
+      int count=0;
+      int max=0;
+     Map<Integer,Integer> mp =new HashMap<>();
+for(int i=0;i<nums.length;i++)
+mp.put(nums[i],1);
+
+System.out.println(mp);
+       for(int i=0;i<nums.length;i++)
+       {
+           int find=nums[i];
+           while(mp.containsKey(find) && mp.get(find)!=0)
+           {
+            count++;
+            mp.put(find,0);
+            find = find+1;
+           }
+           int back= nums[i]-1;
+               while(mp.containsKey(back) && mp.get(back)!=0)
+           {
+            count++;
+            mp.put(back,0);
+            back = back-1;
+           }
+           max=Math.max(max,count);
+ count=0;  // initializing count 0 after completing cycle
+       } 
+    return max;
+    }
+}
 
