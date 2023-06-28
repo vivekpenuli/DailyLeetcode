@@ -1,1 +1,30 @@
+Minimum Time to Complete Trips
+class Solution {
+    public long minimumTime(int[] time, int totalTrips) {
+        long h=0,check=0; 
+        long l=0,mid=0;
+        for(int i =0;i<time.length;i++)
+        h=Math.max(time[i],h);
+    h=h*totalTrips;
+
+    while(l<h)
+    {
+mid = (l+h)/2;
+check=0;
+for(int i=0;i<time.length;i++)
+check +=mid/time[i];
+
+if(check>=totalTrips)
+{
+
+    h=mid;
+}
+else{
+    l=mid+1;
+}
+    }
+    
+    return l ;
+    }
+}
 
