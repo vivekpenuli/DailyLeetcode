@@ -1,1 +1,18 @@
 
+Climbing Stairs
+class Solution {
+Map<Integer,Integer> mp =new HashMap<>();    
+    public int climbStairs(int n) {
+        if(mp.containsKey(n)) return mp.get(n);
+        if(n==0)
+        return 1;
+        if(n<0)
+        return 0;
+
+    mp.put(n,(climbStairs(n-1) + climbStairs(n-2))); 
+return mp.get(n);
+    }
+}
+
+
+
