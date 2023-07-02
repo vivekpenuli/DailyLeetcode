@@ -1,4 +1,4 @@
-Reverse Linked List
+// Reverse Linked List
 struct ListNode* reverseList(struct ListNode* head){
 struct ListNode* prev=NULL,*curr;
 curr=head;
