@@ -1,1 +1,24 @@
+Counting Bits
+class Solution {
+    int check(int m)
+    {
+        if(m==0) return 0;
+        if(m==1) return 1;
+
+        if(m%2==0) return check(m/2);
+        else return 1+ check(m/2);
+    }
+    public int[] countBits(int n) {
+        int[] arr=new int[n+1];
+        for(int i=0;i<=n;i++)
+arr[i]=check(i);
+        return arr;
+    }
+}
+
+
+
+
+
+
 
