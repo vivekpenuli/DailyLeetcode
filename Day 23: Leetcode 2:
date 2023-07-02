@@ -1,1 +1,15 @@
+Reverse Linked List
+struct ListNode* reverseList(struct ListNode* head){
+struct ListNode* prev=NULL,*curr;
+curr=head;
+while(curr!=NULL)
+{
+struct ListNode* check=curr->next;  // the next adress in current node is store in temperary node in order to move current node after it change its address
+curr->next=prev; // current changeing the address what it hold already
+prev=curr;  // prev move
+curr=check;   // now current move with the adress it store in check node
+}
+return prev;
+}
+
 
