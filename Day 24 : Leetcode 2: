@@ -1,5 +1,5 @@
 
-// Next Greater Element I
+// Next Greater Element Is ///
 class Solution {
     public int[] nextGreaterElement(int[] nums1, int[] nums2) {
         Map<Integer,Integer> mp = new HashMap<>();
