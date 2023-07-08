@@ -1,5 +1,5 @@
 
-// K-diff Pairs in an Array //
+// K-diff Pairs in an given Array //
 class Solution {
     public int findPairs(int[] nums, int k) {
         Map<Integer,Integer> mp = new HashMap<>();
