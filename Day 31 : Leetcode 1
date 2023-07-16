@@ -44,3 +44,5 @@ min2=nums[i];
     }
 }
 
+
+Expected Output: 
