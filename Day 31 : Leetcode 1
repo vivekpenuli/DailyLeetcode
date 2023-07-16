@@ -1,1 +1,46 @@
 
+
+
+
+
+ Maximum Product of Three Numbers
+
+class Solution {
+    public int maximumProduct(int[] nums) {
+        int x=Integer.MIN_VALUE;
+        int y=x,z=x;
+        int min1=Integer.MAX_VALUE;
+    int min2=min1;
+        for(int i=0;i<nums.length;i++)
+        {
+            if(x<nums[i])
+            { z=y;
+            y=x;
+            x=nums[i];
+            }
+            else {
+                if(y<nums[i])
+                {z=y;
+                y=nums[i];
+
+                }
+                else if(z<nums[i]){
+z=nums[i];
+                }
+            }
+
+if(min1>=nums[i])
+{
+    min2=min1;
+    min1=nums[i];
+}
+else if(min2>=nums[i])
+min2=nums[i];
+
+
+        }
+
+        return Math.max(min1*min2*x , x*y*z);
+    }
+}
+
