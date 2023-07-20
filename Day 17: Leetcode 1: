@@ -1,4 +1,4 @@
-// Binary Search code 
+// Binary Search code //
 
 class Solution {
     public int search(int[] nums, int target) {
