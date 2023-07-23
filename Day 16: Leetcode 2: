@@ -1,4 +1,4 @@
-// Group Anagrams 
+// Group Anagrams Problem
 class Solution {
     public List<List<String>> groupAnagrams(String[] strs) {
         Map<String , List<String>> mp= new HashMap<>();
