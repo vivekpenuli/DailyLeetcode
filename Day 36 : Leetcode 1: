@@ -1,5 +1,5 @@
 
-1.K Closest Points to Origin
+// 1.K Closest Points to Origin //
 class Solution {
   int getDistance(int[] point) {
         return point[0] * point[0] + point[1] * point[1];
