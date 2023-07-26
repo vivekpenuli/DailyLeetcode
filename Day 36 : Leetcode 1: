@@ -29,3 +29,12 @@ class Solution {
     }
 }
 
+// For example, the following comparator class compares two integers in ascending order:
+class IntegerComparator implements Comparator<Integer> {
+
+    public int compare(Integer a, Integer b) {
+        return a - b;
+    }
+}
+
+
