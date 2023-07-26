@@ -38,3 +38,5 @@ class IntegerComparator implements Comparator<Integer> {
 }
 
 
+The following comparator class compares two integers in descending order
+
