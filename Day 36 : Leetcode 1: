@@ -39,4 +39,11 @@ class IntegerComparator implements Comparator<Integer> {
 
 
 The following comparator class compares two integers in descending order
+class IntegerComparator implements Comparator<Integer> {
+
+    public int compare(Integer a, Integer b) {
+        return b - a;
+    }
+}
+
 
