@@ -1,1 +1,30 @@
 
+3.  189. Rotate Array
+
+
+class Solution {
+     private static void reverse(int[] nums, int start, int end) {
+        while (start < end) {
+            int temp = nums[start];
+            nums[start] = nums[end];
+            nums[end] = temp;
+            start++;
+            end--;
+        }
+    }
+    public void rotate(int[] nums, int k) {
+        int n = nums.length;
+        k = k % n; // To handle cases where k is greater than the array length
+// Most important 
+      
+        reverse(nums, 0, nums.length-k-1);
+       
+        reverse(nums, nums.length-k, nums.length-1);
+   
+        reverse(nums, 0, n - 1);
+    }
+}
+
+
+
+
