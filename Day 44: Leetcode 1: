@@ -1,1 +1,33 @@
+ult = new HashSet<>();
+
+    // Now fix the first element and find the other two elements
+    for (int i = 0; i < arr.length - 2; i++)
+    {
+      // Find other two elements using Two Sum approach
+      int left = i + 1;
+      int right = arr.length - 1;
+
+      while (left < right) {
+        int sum = arr[i] + arr[left] + arr[right];
+
+        if (sum == 0) {
+               List<Integer> ls=new ArrayList<>();
+               ls.add(arr[i]);
+               ls.add(arr[left]);
+               ls.add(arr[right]);
+               result.add(ls);
+         
+          left++;
+          right--;
+        } else if (sum < 0)
+          left++;
+        else
+          right--;
+      }
+    }
+    return new ArrayList<>(result);
+    }
+}
+
+
 
