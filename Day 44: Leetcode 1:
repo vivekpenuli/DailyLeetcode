@@ -1,4 +1,4 @@
-// 
+
 ult = new HashSet<>();
 
     // Now fix the first element and find the other two elements
