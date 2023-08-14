@@ -1,7 +1,4 @@
-6.  48. Rotate Image
-
-
-
+6.  48. Rotate Image //
 class Solution {
     public void rotate(int[][] matrix) {
         int n = matrix.length;
