@@ -9,7 +9,7 @@ Map<Integer,Integer> mp =new HashMap<>();    // Dealing With hash map
         if(n<0)
         return 0;
 
-    mp.put(n,(climbStairs(n-1) + climbStairs(n-2))); // storing the recursion call into map
+    mp.put(n,(climbStairs(n-1) + climbStairs(n-2))); // storing the Recussrion call into map
 return mp.get(n);
     }
 }
