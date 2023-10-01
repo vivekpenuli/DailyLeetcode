@@ -3,7 +3,7 @@
 class Solution {
 Map<Integer,Integer> mp =new HashMap<>();    // Dealing With hash map
     public int climbStairs(int n) {
-        if(mp.containsKey(n)) return mp.get(n);
+        if(mp.containsKey(n)) return mp.get(n);       // checking where the item exist or not
         if(n==0)
         return 1;
         if(n<0)
