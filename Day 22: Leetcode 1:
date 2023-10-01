@@ -1,7 +1,7 @@
 
 // Climbing Stairs //
 class Solution {
-Map<Integer,Integer> mp =new HashMap<>();    
+Map<Integer,Integer> mp =new HashMap<>();    // Dealing With hash map
     public int climbStairs(int n) {
         if(mp.containsKey(n)) return mp.get(n);
         if(n==0)
