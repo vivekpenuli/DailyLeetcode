@@ -39,7 +39,7 @@ class Solution {
     fun majorityElement(nums: IntArray): Int {  // return type define in suffix
         val n = nums.size/2
         val mm = mutableMapOf<Int, Int>()
-        nums.forEach { 
+        nums.forEach {   // for each is used to iterate
             mm.put(it, mm.getOrDefault(it, 0)+1)
             if (mm.getOrDefault(it, 0) > n) return it
         }
