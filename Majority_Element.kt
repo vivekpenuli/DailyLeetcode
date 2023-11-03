@@ -36,7 +36,7 @@
 
 // @lc code=start
 class Solution {
-    fun majorityElement(nums: IntArray): Int {
+    fun majorityElement(nums: IntArray): Int {  // return type define in suffix
         val n = nums.size/2
         val mm = mutableMapOf<Int, Int>()
         nums.forEach { 
