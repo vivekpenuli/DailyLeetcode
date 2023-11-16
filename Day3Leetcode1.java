@@ -1,7 +1,6 @@
 
 
 Majority Element:
-
 class Solution {
     public int majorityElement(int[] nums) {
         int count=0,maj=0;
