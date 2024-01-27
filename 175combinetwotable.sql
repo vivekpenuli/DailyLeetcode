@@ -60,3 +60,11 @@ Output:
 Explanation: 
 There is no address in the address table for the personId = 1 so we return null in their city and state.
 addressId = 1 contains information about the address of personId = 2.
+
+
+
+
+                                                  /****************************Solution *********************************/
+select p.firstName, p.lastName, a.city , a.state from person p 
+ Left Join Address a
+on p.personId = a.personId 
